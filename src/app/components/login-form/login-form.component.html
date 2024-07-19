@@ -1,10 +1,30 @@
-<div id="login-content" class="content-intro">
-    <label for="username" class="mb-4">Email</label>
-    <input id="email" pInputText type="text" class="mb-24" placeholder="Ingrese email">
-    <label for="username" class="mb-4">Contraseña</label>
-    <p-password [toggleMask]="true" class="mb-40 fw" placeholder="Ingrese contraseña" />
-    <p-button label="Acceder" class="fw" [raised]="true" />
+<div id="login-content">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="content-intro">
+        <label for="email" class="mb-4">Email</label>
+        <input id="email" formControlName="email" pInputText type="text" class="mb-4" placeholder="Ingrese email">
+        <div
+            *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+            <p-message severity="error" *ngIf="loginForm.get('email')?.errors?.['required']"
+                text="Email es requerido."></p-message>
+            <p-message severity="error" *ngIf="loginForm.get('email')?.errors?.['invalidEmail']"
+                text="Email no es válido."></p-message>
+        </div>
+
+        <label for="password" class="mb-4 mt-24">Contraseña</label>
+        <p-password formControlName="password" [toggleMask]="true" class="mb-4 fw"
+            placeholder="Ingrese contraseña"></p-password>
+        <div
+            *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+            <p-message severity="error" *ngIf="loginForm.get('password')?.errors?.['required']"
+                text="Contraseña es requerida."></p-message>
+        </div>
+
+        <p-button label="Acceder" class="mt-40 fw" [raised]="true" type="submit"></p-button>
+    </div>
+    </form>
     <p-divider align="center" type="dotted"> o </p-divider>
-    <p-button label="Acceder con Google" [outlined]="true" severity="secondary"
-        icon="pi pi-google" />
+    <p-button label="Acceder con Google" [outlined]="true" severity="secondary" icon="pi pi-google"></p-button>
+
 </div>

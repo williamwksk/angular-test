@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Módulos Custom
 import { LoginComponent } from './components/login/login.component';
@@ -25,7 +26,8 @@ import { KeyFilterModule } from 'primeng/keyfilter';
 import { RippleModule } from 'primeng/ripple';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { GenerativeTextComponent } from './components/generative-text/generative-text.component';
-
+import { MessageModule } from 'primeng/message'; // Importar MessageModule
+import { MessagesModule } from 'primeng/messages';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,9 @@ import { GenerativeTextComponent } from './components/generative-text/generative
     GenerativeTextComponent
   ],
   imports: [
+    MessageModule,
+    MessagesModule,
+    ReactiveFormsModule,
     RippleModule,
     KeyFilterModule,
     BrowserModule,

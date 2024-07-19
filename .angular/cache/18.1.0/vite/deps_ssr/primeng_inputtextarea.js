@@ -5,7 +5,8 @@ import {
 } from "./chunk-X7JYFJU7.js";
 import {
   PrimeNGConfig
-} from "./chunk-26TSWGXT.js";
+} from "./chunk-JNQNSTF4.js";
+import "./chunk-ZC6INRUR.js";
 import {
   CommonModule
 } from "./chunk-WIALKPXA.js";

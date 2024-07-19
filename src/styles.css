@@ -34,6 +34,14 @@ body {
   margin-bottom: 40px;
 }
 
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
 /* Clase custom */
 
 .fw {
