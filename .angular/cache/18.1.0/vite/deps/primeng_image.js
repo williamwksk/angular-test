@@ -14,13 +14,13 @@ import {
   DomHandler
 } from "./chunk-QU7AFVGG.js";
 import {
-  BaseIcon
-} from "./chunk-UGNTHKE2.js";
-import {
   PrimeNGConfig,
   PrimeTemplate,
   SharedModule
 } from "./chunk-42ONIRN6.js";
+import {
+  BaseIcon
+} from "./chunk-UGNTHKE2.js";
 import {
   UniqueComponentId,
   zindexutils

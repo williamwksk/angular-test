@@ -1,9 +1,9 @@
 import {
-  DomHandler
-} from "./chunk-QU7AFVGG.js";
-import {
   NG_VALIDATORS
 } from "./chunk-YLRC65GU.js";
+import {
+  DomHandler
+} from "./chunk-QU7AFVGG.js";
 import {
   CommonModule,
   DOCUMENT,

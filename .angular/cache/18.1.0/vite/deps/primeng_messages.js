@@ -6,9 +6,6 @@ import {
   CheckIcon
 } from "./chunk-75MFQFT3.js";
 import {
-  TimesCircleIcon
-} from "./chunk-L5MJB3FE.js";
-import {
   TimesIcon
 } from "./chunk-236HIVLN.js";
 import {
@@ -22,12 +19,15 @@ import {
   RippleModule
 } from "./chunk-ZDVR5LSZ.js";
 import "./chunk-QU7AFVGG.js";
-import "./chunk-UGNTHKE2.js";
+import {
+  TimesCircleIcon
+} from "./chunk-L5MJB3FE.js";
 import {
   MessageService,
   PrimeNGConfig,
   PrimeTemplate
 } from "./chunk-42ONIRN6.js";
+import "./chunk-UGNTHKE2.js";
 import "./chunk-CI6PZICN.js";
 import {
   CommonModule,

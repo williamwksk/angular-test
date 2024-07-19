@@ -1,13 +1,13 @@
 import {
   TimesCircleIcon
 } from "./chunk-L5MJB3FE.js";
-import "./chunk-UGNTHKE2.js";
 import {
   PrimeNGConfig,
   PrimeTemplate,
   SharedModule,
   TranslationKeys
 } from "./chunk-42ONIRN6.js";
+import "./chunk-UGNTHKE2.js";
 import "./chunk-CI6PZICN.js";
 import {
   CommonModule,

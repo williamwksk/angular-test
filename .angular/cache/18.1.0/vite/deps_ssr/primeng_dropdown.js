@@ -23,6 +23,10 @@ import {
   TimesIcon
 } from "./chunk-ESZRBMZ7.js";
 import {
+  ConnectedOverlayScrollHandler,
+  DomHandler
+} from "./chunk-BLVGPENJ.js";
+import {
   animate,
   animation,
   style,
@@ -30,10 +34,6 @@ import {
   trigger,
   useAnimation
 } from "./chunk-CYXZL6DQ.js";
-import {
-  ConnectedOverlayScrollHandler,
-  DomHandler
-} from "./chunk-BLVGPENJ.js";
 import {
   FilterService,
   OverlayService,

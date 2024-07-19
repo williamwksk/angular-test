@@ -6,14 +6,14 @@ import {
   TimesIcon
 } from "./chunk-ESZRBMZ7.js";
 import {
+  DomHandler
+} from "./chunk-BLVGPENJ.js";
+import {
   animate,
   style,
   transition,
   trigger
 } from "./chunk-CYXZL6DQ.js";
-import {
-  DomHandler
-} from "./chunk-BLVGPENJ.js";
 import {
   PrimeNGConfig,
   PrimeTemplate,

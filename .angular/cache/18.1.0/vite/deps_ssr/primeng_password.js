@@ -17,15 +17,15 @@ import {
   TimesIcon
 } from "./chunk-ESZRBMZ7.js";
 import {
+  ConnectedOverlayScrollHandler,
+  DomHandler
+} from "./chunk-BLVGPENJ.js";
+import {
   animate,
   style,
   transition,
   trigger
 } from "./chunk-CYXZL6DQ.js";
-import {
-  ConnectedOverlayScrollHandler,
-  DomHandler
-} from "./chunk-BLVGPENJ.js";
 import {
   OverlayService,
   PrimeNGConfig,

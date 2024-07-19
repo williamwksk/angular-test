@@ -1,23 +1,41 @@
+<!-- src/app/components/register-form/register-form.component.html -->
 <div id="register-content">
-    <div id="login-content" class="content-intro">
-        <label for="name" class="mb-4">Su nombre</label>
-        <input id="name" pInputText type="text" class="mb-24" placeholder="Ingrese nombre completo">
-
-        <label for="socialname" class="mb-4">Razón social</label>
-        <input id="socialname" pInputText type="text" class="mb-24" placeholder="Ingrese razón">
-
-        <label for="rut" class="mb-4">Rut</label>
-        <input id="rut" pInputText pKeyFilter="num" class="mb-24" placeholder="Ingrese Rut">
-
-        <label for="emailregister" class="mb-4">Email</label>
-        <input id="emailregister" pInputText type="text" class="mb-24" placeholder="Ingrese email">
-
-        <label for="username" class="mb-4">Contraseña</label>
-        <p-password [toggleMask]="true" class="mb-40 fw" placeholder="Ingrese contraseña" />
-
-        <p-button label="Crear cuenta" class="fw" [raised]="true" />
-        <p-divider align="center" type="dotted"> o </p-divider>
-        <p-button label="Crear cuenta con Google" [outlined]="true" severity="secondary"
-            icon="pi pi-google" />
+    <div id="login-content" class="content-intro" [formGroup]="registerForm">
+      <label for="name" class="mb-4">Su nombre</label>
+      <input id="name" formControlName="name" pInputText type="text" class="mb-4" placeholder="Ingrese nombre completo">
+      <div *ngIf="registerForm.get('name')?.invalid && (registerForm.get('name')?.dirty || registerForm.get('name')?.touched)">
+        <p-message severity="error" *ngIf="registerForm.get('name')?.errors?.['required']" text="Nombre es requerido."></p-message>
+      </div>
+  
+      <label for="socialname" class="mb-4 mt-16">Razón social</label>
+      <input id="socialname" formControlName="socialname" pInputText type="text" class="mb-4" placeholder="Ingrese razón">
+      <div *ngIf="registerForm.get('socialname')?.invalid && (registerForm.get('socialname')?.dirty || registerForm.get('socialname')?.touched)">
+        <p-message severity="error" *ngIf="registerForm.get('socialname')?.errors?.['required']" text="Razón social es requerida."></p-message>
+      </div>
+  
+      <label for="rut" class="mb-4 mt-16">Rut</label>
+      <input id="rut" formControlName="rut" pInputText class="mb-4" placeholder="Ingrese Rut" (input)="onRutInput($event)">
+      <div *ngIf="registerForm.get('rut')?.invalid && (registerForm.get('rut')?.dirty || registerForm.get('rut')?.touched)">
+        <p-message severity="error" *ngIf="registerForm.get('rut')?.errors?.['required']" text="RUT es requerido."></p-message>
+        <p-message severity="error" *ngIf="registerForm.get('rut')?.errors?.['invalidRut']" text="RUT no es válido."></p-message>
+      </div>
+  
+      <label for="emailregister" class="mb-4 mt-16">Email</label>
+      <input id="emailregister" formControlName="emailregister" pInputText type="text" class="mb-4" placeholder="Ingrese email">
+      <div *ngIf="registerForm.get('emailregister')?.invalid && (registerForm.get('emailregister')?.dirty || registerForm.get('emailregister')?.touched)">
+        <p-message severity="error" *ngIf="registerForm.get('emailregister')?.errors?.['required']" text="Email es requerido."></p-message>
+        <p-message severity="error" *ngIf="registerForm.get('emailregister')?.errors?.['email']" text="Email no es válido."></p-message>
+      </div>
+  
+      <label for="username" class="mb-4 mt-16">Contraseña</label>
+      <p-password formControlName="password" [toggleMask]="true" class="mb-4 fw" placeholder="Ingrese contraseña"></p-password>
+      <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)">
+        <p-message severity="error" *ngIf="registerForm.get('password')?.errors?.['required']" text="Contraseña es requerida."></p-message>
+      </div>
+  
+      <p-button label="Crear cuenta" class="fw mt-40" [raised]="true" type="submit" (click)="onSubmit()"></p-button>
+      <p-divider align="center" type="dotted"> o </p-divider>
+      <p-button label="Crear cuenta con Google" [outlined]="true" severity="secondary" icon="pi pi-google"></p-button>
     </div>
-</div>
+  </div>
+  
