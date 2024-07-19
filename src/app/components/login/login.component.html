@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="content-section">
+        <div class="blue-section">
+            <div class="header-section">
+                <img src="assets/images/LogoBlanco.svg" alt="Logo" class="logo" width="180">
+            </div>
+            <div class="card-text">
+                <p class="pill-ia mb-16">Servicios basados en IA <img src="assets/images/start3.png" alt="ia" width="12"> </p>
+           <app-generative-text></app-generative-text>
+        </div>
+        </div>
+        <div class="login-white-section">
+            <div class="login-content-form">
+                <p-image src="assets/images/LogoLogin.svg" alt="Logo Licitapyme" width="150" class="mb-24" />
+                <p-selectButton [options]="options" [(ngModel)]="selectedOption" class="mb-32" (onChange)="onSelectionChange()"></p-selectButton>
+
+                <div *ngIf="selectedOption === '1'">
+                    <app-login-form></app-login-form>
+                </div>
+                <div *ngIf="selectedOption === '2'">
+                    <app-register-form></app-register-form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

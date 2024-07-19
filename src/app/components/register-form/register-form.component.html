@@ -1,0 +1,23 @@
+<div id="register-content">
+    <div id="login-content" class="content-intro">
+        <label for="name" class="mb-4">Su nombre</label>
+        <input id="name" pInputText type="text" class="mb-24" placeholder="Ingrese nombre completo">
+
+        <label for="socialname" class="mb-4">Razón social</label>
+        <input id="socialname" pInputText type="text" class="mb-24" placeholder="Ingrese razón">
+
+        <label for="rut" class="mb-4">Rut</label>
+        <input id="rut" pInputText pKeyFilter="num" class="mb-24" placeholder="Ingrese Rut">
+
+        <label for="emailregister" class="mb-4">Email</label>
+        <input id="emailregister" pInputText type="text" class="mb-24" placeholder="Ingrese email">
+
+        <label for="username" class="mb-4">Contraseña</label>
+        <p-password [toggleMask]="true" class="mb-40 fw" placeholder="Ingrese contraseña" />
+
+        <p-button label="Crear cuenta" class="fw" [raised]="true" />
+        <p-divider align="center" type="dotted"> o </p-divider>
+        <p-button label="Crear cuenta con Google" [outlined]="true" severity="secondary"
+            icon="pi pi-google" />
+    </div>
+</div>
