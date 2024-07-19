@@ -10,25 +10,26 @@ export class GenerativeTextComponent {
    // Grupos de textos a ser animados
    grupos = [
     {
-      text2: '¿Necesitas organizar tus licitaciones?, hazlo con',
-      text3: 'Software de Gestión de Licitaciones',
-      text4: 'No te pierdas ninguna licitación por errores de seguimiento y enfócate en el 80/20 de las mejores licitaciones. Controla a tu equipo en el paso a paso de cada licitación.'
+      "text2": "¿Necesitas organizar tus proyectos?, hazlo con",
+      "text3": "Software de Gestión de Proyectos",
+      "text4": "No pierdas de vista ningún proyecto por errores de seguimiento y enfócate en las tareas más importantes. Controla a tu equipo en cada etapa del proyecto y asegura el éxito de tus entregas."
     },
     {
-      text2: 'Problemas con la gestión de mails',
-      text3: 'Marketing Personalizado y Transaccional',
-      text4: 'Realizamos campañas de venta dirigidas a sus clientes y potenciales clientes, alta tasa de retorno, le entregamos la lista de clientes interesados en cada campaña.'
+      "text2": "Dificultades gestionando tareas y plazos",
+      "text3": "Gestión Eficiente de Tareas",
+      "text4": "Optimiza tus flujos de trabajo con una gestión eficiente de tareas y plazos. Asegura que cada miembro del equipo esté alineado y trabajando hacia los mismos objetivos."
     },
     {
-      text2: 'Se siempre el primero con',
-      text3: 'Compra Ágil',
-      text4: 'Ofrecemos servicios para que su empresa aumente su venta y su margen de ganancia al vender en las Instituciones del Estado de Chile en los 3 canales principales existentes. Convenio Marco, Compra Ágil y Licitaciones públicas.'
+      "text2": "Mantén tus equipos sincronizados con",
+      "text3": "Colaboración en Tiempo Real",
+      "text4": "Facilita la comunicación y colaboración en tiempo real entre todos los miembros del equipo, asegurando que todos estén informados y alineados en todo momento."
     },
     {
-      text2: 'Te cuesta buscar ofertas',
-      text3: 'Robot de Ofertas y Stock',
-      text4: 'Automatiza y programa las ofertas de tus productos de cualquier Convenio Marco, automatiza y parametriza el la visualización de tus productos en caulquier Convenio Marco.'
+      "text2": "¿Problemas para seguir el progreso?",
+      "text3": "Monitoreo de Proyectos en Vivo",
+      "text4": "Automatiza y monitorea el progreso de tus proyectos en tiempo real. Obtén informes detallados y toma decisiones informadas basadas en datos actualizados al instante."
     }
+    
   ];
 
   currentGroupIndex = 0;
